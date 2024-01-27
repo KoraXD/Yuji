@@ -34,7 +34,7 @@ def get_user_list(__init__, key):
 
 
 # enable logging
-FORMAT = "[ᴇxᴏɴ] %(message)s"
+FORMAT = "[YUKI] %(message)s"
 logging.basicConfig(
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
     level=logging.INFO,
@@ -48,8 +48,8 @@ logging.getLogger("ptbcontrib.postgres_persistence.postgrespersistence").setLeve
     logging.WARNING
 )
 
-LOGGER = logging.getLogger("[ᴇxᴏɴ]")
-LOGGER.info("ᴇxᴏɴ ɪs sᴛᴀʀᴛɪɴɢ. | ᴀɴ ᴀʙɪsʜɴᴏɪᴍғ ᴘʀᴏᴊᴇᴄᴛ ᴘᴀʀᴛs. | ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ɢᴘʟᴠ3.")
+LOGGER = logging.getLogger("[YUKI]")
+LOGGER.info("Yuki Is Starting.....")
 
 try:
     if environ.get("ENV"):
