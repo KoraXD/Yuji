@@ -8,20 +8,17 @@ load_dotenv()
 class Config(object):
     LOGGER = True
 
-    API_ID = int(getenv("API_ID", 6))
-    API_HASH = getenv("API_HASH", None)
+    API_ID = 18641799
+    API_HASH = "2027706706fd39baf84c01ff5b95a6a6"
     ARQ_API_KEY = "PMPTTD-HOMLMF-SRBHNH-RZMWXL-ARQ"
     SPAMWATCH_API = None
-    TOKEN = getenv("TOKEN", None)
-    OWNER_ID = int(getenv("OWNER_ID", 5938660179))
-    OWNER_USERNAME = getenv("OWNER_USERNAME", "Abishnoi1M")
-    SUPPORT_CHAT = getenv("SUPPORT_CHAT", "AbishnoiMF")
-    LOGGER_ID = int(getenv("LOGGER_ID", "-1001819078701"))
-    MONGO_URI = getenv(
-        "MONGO_DB_URI",
-        "mongodb+srv://public:abishnoimf@cluster0.rqk6ihd.mongodb.net/?retryWrites=true&w=majority",
-    )
-    DB_NAME = getenv("DB_NAME", "ExonRobot")
+    TOKEN = "6338530204:AAFdMwnT4xv8uAcJUlbvTw3A1BwmUyhqM80"
+    OWNER_ID = 
+    OWNER_USERNAME = "KoraXD"
+    SUPPORT_CHAT = "YujiXSupport"
+    LOGGER_ID = -1002142057592
+    MONGO_URI = "mongodb+srv://Jujutsu:Jujutsu@jujutsu.gk8fhv9.mongodb.net/?retryWrites=true&w=majority"
+    DB_NAME = "Yuki"
     REDIS_URL = "redis://default:wK6ZCiclq4iQKYpgfY90v6kd6WdPfEwl@redis-10186.c263.us-east-1-2.ec2.cloud.redislabs.com:10186/default"
     DATABASE_URL = getenv("DATABASE_URL", None)
 
