@@ -185,12 +185,12 @@ def get_id(update: Update, context: CallbackContext):
     else:
         if chat.type == "private":
             msg.reply_text(
-                f"⟃ ʏᴏᴜʀ ɪᴅ ɪꜱ <code>{chat.id}</code>.", parse_mode=ParseMode.HTML
+                f"× ʏᴏᴜʀ ɪᴅ ɪꜱ <code>{chat.id}</code>.", parse_mode=ParseMode.HTML
             )
 
         else:
             msg.reply_text(
-                f"⟃ <b>ᴜꜱᴇʀ:</b> {mention_html(msg.from_user.id, msg.from_user.first_name)}\n⟃ <b>ꜰʀᴏᴍ ᴜꜱᴇʀ ɪᴅ:</b> <code>{update.effective_message.from_user.id}</code>\n⟃ <b>ᴛʜɪꜱ ɢʀᴏᴜᴘ ɪᴅ:</b> <code>{chat.id}</code>",
+                f"× <b>ᴜꜱᴇʀ:</b> {mention_html(msg.from_user.id, msg.from_user.first_name)}\n⟃ <b>ꜰʀᴏᴍ ᴜꜱᴇʀ ɪᴅ:</b> <code>{update.effective_message.from_user.id}</code>\n⟃ <b>ᴛʜɪꜱ ɢʀᴏᴜᴘ ɪᴅ:</b> <code>{chat.id}</code>",
                 parse_mode=ParseMode.HTML,
             )
 
@@ -279,20 +279,20 @@ def info(update: Update, context: CallbackContext):
 
     text = (
         f"╔━⊰✦✪「 <b> Appraisal Results:</b> 」✪✦⊱━╗\n"
-        f"➻ ɪᴅ: <code>{user.id}</code>\n"
-        f"➻ ꜰɪʀꜱᴛ ɴᴀᴍᴇ: {html.escape(user.first_name)}"
+        f"× ɪᴅ: <code>{user.id}</code>\n"
+        f"× ꜰɪʀꜱᴛ ɴᴀᴍᴇ: {html.escape(user.first_name)}"
     )
 
     if user.last_name:
-        text += f"\n➻ ʟᴀꜱᴛ ɴᴀᴍᴇ: {html.escape(user.last_name)}"
+        text += f"\n× ʟᴀꜱᴛ ɴᴀᴍᴇ: {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n➻ ᴜꜱᴇʀɴᴀᴍᴇ: @{html.escape(user.username)}"
+        text += f"\n× ᴜꜱᴇʀɴᴀᴍᴇ: @{html.escape(user.username)}"
 
-    text += f"\n➻ ᴜꜱᴇʀʟɪɴᴋ: {mention_html(user.id, 'link')}"
+    text += f"\n× ᴜꜱᴇʀʟɪɴᴋ: {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n➻ <b>ᴩʀᴇsᴇɴᴄᴇ:</b> <code>{}</code>"
+        _stext = "\n× <b>ᴩʀᴇsᴇɴᴄᴇ:</b> <code>{}</code>"
 
         # afk_st = is_afk(user.id)
         #  if afk_st:
@@ -306,7 +306,7 @@ def info(update: Update, context: CallbackContext):
                 text += _stext.format("ᴅᴇᴛᴇᴄᴛᴇᴅ")
             elif status in {"administrator", "creator"}:
                 text += _stext.format("ᴀᴅᴍɪɴ")
-    if user_id not in [bot.id, 777000, 1087968824]:
+    if user_id not in [bot.id, 777000, 6495253163]:
         userhp = hpmanager(user)
         text += f"\n\n<b>ʜᴇᴀʟᴛʜ:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
@@ -315,7 +315,7 @@ def info(update: Update, context: CallbackContext):
         if spamwtc:
             text += "\n\n<b>ᴛʜɪs ᴘᴇʀsᴏɴ ɪs sᴘᴀᴍᴡᴀᴛᴄʜᴇᴅ!</b>"
             text += f"\nʀᴇᴀꜱᴏɴ: <pre>{spamwtc.reason}</pre>"
-            text += "\nᴀᴘᴘᴇᴀʟ ᴀᴛ @AbishnoiMF"
+            text += "\nᴀᴘᴘᴇᴀʟ ᴀᴛ @YujiXSupport"
     except:
         pass  # don't crash if api is down somehow...
 
@@ -339,12 +339,12 @@ def info(update: Update, context: CallbackContext):
     elif user.id in WOLVES:
         text += "\n\nThe level for this user is Villain"
         disaster_level_present = True
-    elif user.id == 5938660179:
+    elif user.id == 6495253163:
         text += "\n\nᴄᴏ-ᴏᴡᴇʀɴ ᴏғ ᴀ ʙᴏᴛ."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/Abishnoi_bots/60">ʟᴇᴠᴇʟʟɪɴɢ</a>]'.format(
+        text += ' [<a href="https://t.me/YujiXSupport">ʟᴇᴠᴇʟʟɪɴɢ</a>]'.format(
             bot.username,
         )
 
