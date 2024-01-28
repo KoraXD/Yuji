@@ -1,32 +1,3 @@
-"""
-MIT License
-
-Copyright (c) 2022 ABISHNOI69
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-"""
-
-# ""DEAR PRO PEOPLE,  DON'T REMOVE & CHANGE THIS LINE
-# TG :- @Abishnoi1m
-#     UPDATE   :- Abishnoi_bots
-#     GITHUB :- ABISHNOI69 ""
-
 
 import asyncio
 import os
@@ -44,7 +15,7 @@ from datetime import datetime
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
 
-wibu = "Exon_Robot"
+wibu = "YujiXRobot"
 telegraph = Telegraph()
 data = telegraph.create_account(short_name=wibu)
 auth_url = data["auth_url"]
@@ -52,7 +23,7 @@ auth_url = data["auth_url"]
 
 @register(pattern="^/tm$")
 async def _(event):
-    loda = "use\n➥ `/tgm` (reply to media)\n➥ `/tgt` (reply to text)"
+    loda = "Use\n× `/tgm` (reply to media)\n× `/tgt` (reply to text)"
     lund = await event.reply(loda)
     await asyncio.sleep(10)
     await event.delete()
@@ -96,7 +67,7 @@ async def telegrap(event):
                         buttons=[
                             [
                                 types.KeyboardButtonUrl(
-                                    "➡ ʙʀᴏᴡsᴇʀ ᴠɪᴇᴡ",
+                                    "× ʙʀᴏᴡsᴇʀ ᴠɪᴇᴡ",
                                     "https://telegra.ph{}".format(
                                         media_urls[0], (ms + ms_two)
                                     ),
@@ -135,11 +106,11 @@ async def telegrap(event):
             url = "https://telegra.ph/{}".format(response["path"])
             await Client.send_message(
                 event.chat_id,
-                f"ᴅᴏɴᴇ!\n**•ʀᴇϙᴜᴇꜱᴛᴇᴅ ʙʏ:-** [{event.sender.first_name}](tg://user?id={event.sender.id})\n**•ᴜᴘʟᴏᴀᴅ ʙʏ:-** [{a.first_name}](tg://user?id={a.id})\n**•ʟɪɴᴋ:** `{url}`",
+                f"ᴅᴏɴᴇ!\n**• ʀᴇϙᴜᴇꜱᴛᴇᴅ ʙʏ:-** [{event.sender.first_name}](tg://user?id={event.sender.id})\n**• ᴜᴘʟᴏᴀᴅ ʙʏ:-** [{a.first_name}](tg://user?id={a.id})\n**• ʟɪɴᴋ:** `{url}`",
                 buttons=[
                     [
                         types.KeyboardButtonUrl(
-                            "➡ ʙʀᴏᴡsᴇʀ ᴠɪᴇᴡ ",
+                            "× ʙʀᴏᴡsᴇʀ ᴠɪᴇᴡ ",
                             "https://telegra.ph/{}".format(response["path"], ms),
                         )
                     ]
