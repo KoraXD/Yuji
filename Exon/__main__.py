@@ -321,8 +321,7 @@ def help_button(update: Update, context: CallbackContext):
             )
             help_buttons.append(
                 [
-                    InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back"),
-                    InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", callback_data="ABG_support"),
+                    InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back")
                 ]
             )
             query.message.edit_text(
