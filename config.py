@@ -16,7 +16,7 @@ class Config(object):
     OWNER_ID = 6338530204
     OWNER_USERNAME = "KoraXD"
     SUPPORT_CHAT = "YujiXSupport"
-    LOGGER_ID = -1002142057592
+    LOGGER_ID = -4177541085
     MONGO_URI = "mongodb+srv://Jujutsu:Jujutsu@jujutsu.gk8fhv9.mongodb.net/?retryWrites=true&w=majority"
     DB_NAME = "Yuki"
     REDIS_URL = "redis://default:wK6ZCiclq4iQKYpgfY90v6kd6WdPfEwl@redis-10186.c263.us-east-1-2.ec2.cloud.redislabs.com:10186/default"
