@@ -485,9 +485,9 @@ def stats(update, context):
     try:
         update.effective_message.reply_text(
             status
-            + "\n*Bot statistics*:\n"
+            + "\n*ʏᴜᴊɪ ʙᴏᴛ ꜱᴛᴀᴛɪᴄꜱ*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + "╘══「 By [Kora](t.me/koraxd) 」\n",
+            + "╘══「 [ᴋᴏʀᴀ](t.me/koraxd) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(kb),
             disable_web_page_preview=True,
@@ -497,12 +497,11 @@ def stats(update, context):
             (
                 (
                     (
-                        "\n*Bot statistics*:\n"
+                        "\n*ʏᴜᴊɪ ʙᴏᴛ ꜱᴛᴀᴛɪᴄꜱ*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + "\n\n⍙ [ɢɪᴛʜᴜʙ](https://github.com/Abishnoi69/ExonRobot) | ⍚ \n\n"
-                )
-                + "╘══「 by [ᴅʏɴᴀᴍɪᴄ](github.com/Abishnoi69) 」\n"
+                    + "╘══「 [ᴋᴏʀᴀ](t.me/KoraXD) 」\n"
+                ),
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(kb),
