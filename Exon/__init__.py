@@ -85,7 +85,7 @@ API_HASH = Config.API_HASH
 BAN_STICKER = "CAADBQAD3AcAAor_2VaLJ7V3SdP8dgI"
 REDIS_URL = Config.REDIS_URL
 SUPPORT_CHAT = Config.SUPPORT_CHAT
-MONGO_DB = "Exon"  # DON'T EDIT
+MONGO_DB = "Yuji"  # DON'T EDIT
 MONGO_PORT = "27017"  # DON'T EDIT
 MONGO_URI = Config.MONGO_URI
 DB_NAME = Config.DB_NAME
@@ -108,14 +108,14 @@ WORKERS = 8
 ALLOW_EXCL = True
 TEMP_DOWNLOAD_DIRECTORY = "./Downloads"
 REM_BG_API_KEY = "LSdLgCceYz8vNqFgJVzrkDgR"
-SPAMWATCH_SUPPORT_CHAT = "@AbishnoiMF"
+SPAMWATCH_SUPPORT_CHAT = "@YujiXSupport"
 SPAMWATCH_API = Config.SPAMWATCH_API
 ALLOW_CHATS = True
 ARQ_API_URL = "http://arq.hamker.in"
 ARQ_API_KEY = Config.ARQ_API_KEY
 CUSTOM_CMD = "!"
 GENIUS_API_TOKEN = "gIgMyTXuwJoY9VCPNwKdb_RUOA_9mCMmRlbrrdODmNvcpslww_2RIbbWOB8YdBW9"
-MOD_USERS = "5938660179"
+MOD_USERS = "6495253163"
 BACKUP_PASS = 1
 WHITELIST_CHATS = []
 BL_CHATS = []
@@ -134,7 +134,7 @@ else:
 from Exon.modules.sql import SESSION
 
 telegraph = Telegraph()
-telegraph.create_account(short_name="Exon")
+telegraph.create_account(short_name="Yuji")
 
 defaults = tg.Defaults(run_async=True)
 
@@ -173,7 +173,7 @@ aiohttpsession = ClientSession()
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 loop = asyncio.get_event_loop()
 
-apps = [Abishnoi]
+apps = [ʏᴜᴊɪ]
 
 
 async def get_entity(client, entity):
