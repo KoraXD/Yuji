@@ -36,23 +36,23 @@ from Exon.modules.helper_funcs.misc import paginate_modules
 from Exon.modules.language import gs
 
 PM_START_TEX = """
-ʜᴇʟʟᴏ `{}`, ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ \nᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ ʙʀᴏ . . . 
+ʜᴇʟʟᴏ `{}`, ʜᴏᴡ ᴀʀᴇ ʏᴏᴜ \nᴡᴀɪᴛ ᴀ ᴍᴏᴍᴇɴᴛ. . . 
 """
 
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="❣ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ ❣︎", url=f"t.me/{BOT_USERNAME}?startgroup=new"
+            text="➕ ᴀᴅᴅ ᴍᴇ", url=f"t.me/{BOT_USERNAME}?startgroup=new"
         ),
     ],
     [
-        InlineKeyboardButton(text=f"🚁 ʜᴇʟᴘ 🚁", callback_data="help_back"),
-        InlineKeyboardButton(text=f"🥀 sᴛᴀᴛs 🥀", callback_data="stats_callback"),
+        InlineKeyboardButton(text=f"👀 ʜᴇʟᴘ", callback_data="help_back"),
+        InlineKeyboardButton(text=f"✨ ᴀʙᴏᴜᴛ", callback_data="ABG_"),
     ],
     [
-        InlineKeyboardButton(text="🏡 ᴀʙᴏᴜᴛ 🏡", callback_data="ABG_"),
-        InlineKeyboardButton(text="🥀 ᴅᴇᴠᴇʟᴏᴘᴇʀ 🥀", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text="🗯️ sᴜᴘᴘᴏʀᴛ", url="t.me/YujiXSupport"),
+        InlineKeyboardButton(text="🧑🏻‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ", url=f"tg://user?id=6495253163"),
     ],
 ]
 
@@ -117,7 +117,7 @@ def send_help(chat_id, text, keyboard=None):
 
     if not keyboard:
         kb = paginate_modules(0, HELPABLE, "help")
-        # kb.append([InlineKeyboardButton(text='sᴜᴘᴘᴏʀᴛ', url='https://t.me/AbishnoiMF'),
+        # kb.append([InlineKeyboardButton(text='sᴜᴘᴘᴏʀᴛ', url='https://t.me/YujiXSupport'),
         #           InlineKeyboardButton(text='ʙᴀᴄᴋ', callback_data='start_back'),
         #           InlineKeyboardButton(text="ᴛʀʏ ɪɴʟɪɴᴇ", switch_inline_query_current_chat="")])
         keyboard = InlineKeyboardMarkup(kb)
@@ -206,7 +206,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
                         InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="help_back"),
                         InlineKeyboardButton(
                             text="sᴜᴘᴘᴏʀᴛ",
-                            callback_data="ABG_support",
+                            callback_data="YujiXSupport",
                         ),
                     ]
                 )
@@ -236,15 +236,9 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
             first_name = update.effective_user.first_name
             usr = update.effective_user
             lol = update.effective_message.reply_text(
-                PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
-            )
-            time.sleep(0.4)
-            lol.edit_text("🎊")
+                PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN)
+            lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ...")
             time.sleep(0.5)
-            lol.edit_text("⚡")
-            time.sleep(0.3)
-            lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
-            time.sleep(0.4)
             lol.delete()
             update.effective_message.reply_text(
                 text=gs(chat.id, "pm_start_text").format(
@@ -410,7 +404,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="• ʜᴇʟᴘ •​",
+                                text="ʜᴇʟᴘ",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -426,7 +420,7 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="• ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ •",
+                            text="ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ",
                             url="https://t.me/{}?start=help".format(
                                 context.bot.username
                             ),
@@ -434,7 +428,7 @@ def get_help(update: Update, context: CallbackContext):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="• ᴏᴩᴇɴ ʜᴇʀᴇ •",
+                            text="ᴏᴩᴇɴ ʜᴇʀᴇ",
                             callback_data="help_back",
                         )
                     ],
@@ -688,18 +682,14 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.sendAnimation(
-                f"@{SUPPORT_CHAT}",
-                animation="https://te.legra.ph/file/8dea393ddf4fc2e339179.gif",
+                f"@YujiXSupport",
+                animation="https://telegra.ph/file/8d6297e805c6576ffa6c4.jpg",
                 caption=f"""
-ㅤ🥀 {dispatcher.bot.first_name} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ ✨ .....
-
+ɪ'ᴍ ᴀʟɪᴠᴇ ! ✨
 ━━━━━━━━━━━━━
-⍟ ᴍʏ [ᴏᴡɴᴇʀ](https://t.me/{OWNER_USERNAME})
-⍟ **ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{lver}`
-⍟ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tver}`
-⍟ **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pver}`
-⍟ **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{version_info[0]}.{version_info[1]}.{version_info[2]}`
-⍟ **ʙᴏᴛ ᴠᴇʀsɪᴏɴ :** `2.69``
+× **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tver}`
+× **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pver}`
+× **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{version_info[0]}.{version_info[1]}.{version_info[2]}`
 ━━━━━━━━━━━━━
 """,
                 parse_mode=ParseMode.MARKDOWN,
