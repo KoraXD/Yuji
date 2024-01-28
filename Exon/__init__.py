@@ -173,7 +173,7 @@ aiohttpsession = ClientSession()
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 loop = asyncio.get_event_loop()
 
-apps = [ʏᴜᴊɪ]
+apps = [Abishnoi]
 
 
 async def get_entity(client, entity):
@@ -211,7 +211,7 @@ TIGERS = list(TIGERS)
 
 
 # ʙᴏᴛ ɪɴғᴏ
-print("[INFO]: ɢᴇᴛᴛɪɴɢ ʙᴏᴛ ɪɴғᴏ...")
+print("[ʏᴜᴊɪ]: ɢᴇᴛᴛɪɴɢ ʙᴏᴛ ɪɴғᴏ...")
 BOT_ID = dispatcher.bot.id
 BOT_NAME = dispatcher.bot.first_name
 BOT_USERNAME = dispatcher.bot.username
