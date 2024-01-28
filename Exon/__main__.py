@@ -700,7 +700,7 @@ def main():
             log.warning(e.message)
 
     log.info(
-        f"ᴜsɪɴɢ ʟᴏɴɢ ᴘᴏʟʟɪɴɢ. ........... ᴇɴᴊᴏʏ ʏᴏᴜʀ ʙᴏᴛ sᴛᴀʀᴛᴇᴅ ᴀs →  {dispatcher.bot.first_name} "
+        f"ʙᴏᴛ sᴛᴀʀᴛᴇᴅ."
     )
     updater.start_polling(timeout=15, read_latency=4, drop_pending_updates=True)
 
@@ -713,7 +713,7 @@ def main():
 
 
 if __name__ == "__main__":
-    log.info("[ᴇxᴏɴ] →  sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs: " + str(ALL_MODULES))
+    log.info("[YUJI] →  sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()
