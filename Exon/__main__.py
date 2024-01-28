@@ -241,14 +241,7 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
             time.sleep(0.5)
             lol.delete()
             update.effective_message.reply_text(
-                text=gs(chat.id, "pm_start_text").format(
-                    escape_markdown(first_name),
-                    escape_markdown(context.bot.first_name),
-                    escape_markdown(uptime),
-                    sql.num_chat_users(),
-                    sql.num_chats(),
-                    OWNER_ID,
-                ),
+                text=gs(chat.id, "pm_start_text"),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -713,7 +706,7 @@ def main():
 
 
 if __name__ == "__main__":
-    log.info("[YUJI] →  sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs: " + str(ALL_MODULES))
+    log.info("ʏᴜᴊɪ sᴜᴄᴄᴇssғᴜʟʟʏ ʟᴏᴀᴅᴇᴅ ᴍᴏᴅᴜʟᴇs: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()
